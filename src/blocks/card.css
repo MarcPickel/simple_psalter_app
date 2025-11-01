@@ -1,0 +1,24 @@
+.card {
+  width: 300px;
+  font-family: "Times New Roman", serif;
+
+  /*Temporary border to easiky visualize card placement and behavior*/
+  border: 1px solid red;
+}
+
+.card__title {
+  font-size: 33px;
+  font-weight: 500;
+}
+
+.card__subtitle {
+  font-size: 24px;
+}
+
+.card__pretext {
+  font-size: 20px;
+}
+
+.card__text {
+  font-size: 20px;
+}

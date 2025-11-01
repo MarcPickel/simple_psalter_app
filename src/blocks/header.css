@@ -1,0 +1,37 @@
+.header {
+  margin: 0;
+  padding: 30px;
+  background-color: #6b1b24;
+  box-sizing: border-box;
+  border-bottom: 2px solid #efbf04;
+}
+
+.header__logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.header__title {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 500; /*Try 500, or try 700*/
+}
+
+.header__psalm-button {
+  height: 40px;
+  width: 80px;
+  border-radius: 20%;
+  font-family: Arial, sans-serif;
+}
+
+.header__trans-button {
+  background: invisible;
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+.header__text {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}

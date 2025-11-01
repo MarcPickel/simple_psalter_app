@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="The Simple Psalter is a simple prayer app that generates for the prayerful user a random psalm from the 150 that are found in Sacred Scripture."
+    />
+    <meta name="author" content="Marc Pickelman" />
+    <meta name="keywords" content="prayer app, prayer application" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Simple Psalter App</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="" alt="The Simple Psalter logo" class="header__logo" />
+      <p class="header__title">The Simple Psalter</p>
+      <button class="header__psalm-button">"Get a psalm"</button>
+      <!--Button to select Translation in abbreviations: placeholder text-->
+      <button class="header__trans-button">"RSVCE"</button>
+      <!--P-tag to show which psalm the user is reading: placeholder text-->
+      <p class="header__text">Psalm 23</p>
+    </header>
+
+    <main class="main">
+      <section class="cards">
+        <!--Temporary hard-coded psalm for example-->
+        <div class="card">
+          <h1 class="card__title">Psalm 23</h1>
+          <h2 class="card__subtitle">The Divine Shepherd</h2>
+          <p class="card__pretext">A Psalm of David.</p>
+          <p class="card__text">
+            1 The Lord is my shepherd, I shall not want;<br />
+            2 he makes me lie down in green pastures. He leads me beside still
+            waters;<br />
+            3 he restores my soul. He leads me in paths of righteousness for his
+            name’s sake.<br />
+            4 Even though I walk through the valley of the shadow of death, I
+            fear no evil; for thou art with me; thy rod and thy staff, they
+            comfort me.<br />
+            5 Thou preparest a table before me in the presence of my enemies;
+            thou anointest my head with oil, my cup overflows.<br />
+            6 Surely goodness and mercy shall follow me all the days of my life;
+            and I shall dwell in the house of the Lord for ever.
+          </p>
+        </div>
+
+        <!--Card template in which a random psalm is generated and displayed to thr user-->
+        <template id="card-template">
+          <div class="card">
+            <h1 class="card__title"></h1>
+            <h2 class="card__subtitle"></h2>
+            <p class="card__pretext"></p>
+            <p class="card__text"></p>
+          </div>
+        </template>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="menu">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </nav>
+
+      <a>The Simple Psalter © Marc Pickelman</a>
+    </footer>
+  </body>
+</html>
