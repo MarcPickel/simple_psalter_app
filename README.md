@@ -1,4 +1,4 @@
-# TripleTen Project 9: Spots
+# The Simple Psalter App
 
 ### Overview
 
@@ -10,7 +10,7 @@
 
 **Description**
 
-This is the fifth installment of the se_spots_project of the Software Engineering program at TripleTen. It was created using HTML, CSS, and JavaScript -- based on the project description on the TripleTen website and the design on Figma -- and features webpage layout technologies and techniques (techne), such as grid layout and media queries, making it responsive to popular screen sizes.
+The Simple Psalter is a simple prayer app that generates for the prayerful user a random psalm from the 150 that are found in Sacred Scripture.
 
 **Techne**
 
@@ -29,19 +29,16 @@ This is the fifth installment of the se_spots_project of the Software Engineerin
 - Font-face
 
 **Project Images**
-images/avatar.jpg
-images/1-photo-by-moritz-feldmann-from-pexels.jpg
-![iPhone view](project-screenshot-320px-1.jpg)
-![Tablet view](project-screenshot-764px.jpg)
-![Desktop view](project-screenshot-1440px.jpg)
+Add images!!
+![iPhone view]()
+![Tablet view]()
+![Desktop view]()
 
 **Link to Project via GitHub**
-
-https://marcpickel.github.io/se_project_spots/
+In the works
 
 **Link to Video Explaining Project on Google**
-
-https://drive.google.com/file/d/1ASJKkOX-5D_zDBUgLVbI4_gHTjgtWNiK/view
+In the works
 
 **Link to Video Explaining Project on YouTube**
-https://youtu.be/Hu_X-yw7w2A
+In the works
