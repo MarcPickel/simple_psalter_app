@@ -1,24 +1,28 @@
 .card {
-  width: 300px;
-  font-family: "Times New Roman", serif;
+  width: 400px;
+  font-family: "Libtertinus Serif Display", "Times New Roman", serif;
 
   /*Temporary border to easiky visualize card placement and behavior*/
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 .card__title {
+  margin: 0 0 20px;
   font-size: 33px;
   font-weight: 500;
 }
 
 .card__subtitle {
+  margin: 0 0 20px;
   font-size: 24px;
 }
 
 .card__pretext {
+  margin: 0 0 20px;
   font-size: 20px;
 }
 
 .card__text {
+  margin: 0;
   font-size: 20px;
 }

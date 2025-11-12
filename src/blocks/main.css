@@ -1,6 +1,7 @@
 .main {
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fbf9d9;
+  background-color: #fff9e9;
 }

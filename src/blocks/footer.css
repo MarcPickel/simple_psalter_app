@@ -1,6 +1,8 @@
 .footer {
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   background-color: #6b1b24;
-  border-top: 2px solid #d4af37;
+  border-top: 3px solid #d4af37;
 }
