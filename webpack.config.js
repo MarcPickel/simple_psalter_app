@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
+    filename: "index.js",
     publicPath: "",
   },
 
@@ -19,7 +19,8 @@ module.exports = {
   devServer: {
     static: path.resolve(__dirname, "./dist"),
     compress: true,
-    port: 8080,
+    // allow overriding the port via the PORT env var to avoid EADDRINUSE
+    port: Number(process.env.PORT) || 3000,
     open: true,
     liveReload: true,
     hot: false,
@@ -30,7 +31,8 @@ module.exports = {
       {
         test: /\.js$/,
         loader: "babel-loader",
-        exclude: "/node_modules/",
+        // exclude node_modules using a RegExp (string was not excluding properly)
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
@@ -46,7 +48,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|webp|gif|woff(2)?|eot|ttf|otf)$/,
+        // Make the image/font test case-insensitive so files like .PNG are matched
+        test: /\.(png|svg|jpg|jpeg|webp|gif|woff(2)?|eot|ttf|otf)$/i,
         type: "asset/resource",
       },
     ],
@@ -54,7 +57,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      favicon: "./src/images/favicon.ico",
+      favicon: "./src/images/favicon-psalter.svg",
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),

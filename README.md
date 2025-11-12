@@ -12,21 +12,8 @@
 
 The Simple Psalter is a simple prayer app that generates for the prayerful user a random psalm from the 150 that are found in Sacred Scripture.
 
-**Techne**
-
-- HTML5
-- CSS3
-- JavaScript
-- Flat BEM file structure
-- BEM naming conventions
-- Semantic tags
-- Responsive formats: 320px - 1440px
-- Grid layout
-- Flexbox
-- CSS hover effect
-- Incorporation of Fonts.css
-- Addition of fonts directory in vendor directory
-- Font-face
+**Technologies Used**
+In the works
 
 **Project Images**
 Add images!!

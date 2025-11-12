@@ -14,13 +14,21 @@
 
   <body>
     <header class="header">
-      <img src="" alt="The Simple Psalter logo" class="header__logo" />
-      <p class="header__title">The Simple Psalter</p>
-      <button class="header__psalm-button">"Get a psalm"</button>
-      <!--Button to select Translation in abbreviations: placeholder text-->
-      <button class="header__trans-button">"RSVCE"</button>
-      <!--P-tag to show which psalm the user is reading: placeholder text-->
-      <p class="header__text">Psalm 23</p>
+      <div class="header__content_simple-psalter">
+        <img
+          src="<%=require('./images/simple_psalter_logo.PNG')%>"
+          alt="The Simple Psalter logo"
+          class="header__logo"
+        />
+        <p class="header__title">The Simple Psalter</p>
+      </div>
+      <button class="header__psalm-button">Get a psalm</button>
+      <div class="header__content_psalm-trans">
+        <!--P-tag to show which psalm the user is reading: placeholder text-->
+        <p class="header__text">Psalm 23</p>
+        <!--Button to select Translation in abbreviations: placeholder text-->
+        <button class="header__trans-button">RSVCE</button>
+      </div>
     </header>
 
     <main class="main">
@@ -67,7 +75,7 @@
         </ul>
       </nav>
 
-      <a>The Simple Psalter © Marc Pickelman</a>
+      <a>The Simple Psalter © 2025 Marc Pickelman</a>
     </footer>
   </body>
 </html>
