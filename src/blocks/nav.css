@@ -21,3 +21,19 @@
 .nav__link a:hover {
   color: #fbf9d9;
 }
+
+.nav__button {
+  margin: 0;
+  text-decoration: none;
+  color: #000;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+}
+
+.nav__button:hover {
+  color: #fbf9d9;
+  cursor: pointer;
+}

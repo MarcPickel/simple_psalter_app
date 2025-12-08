@@ -64,7 +64,7 @@
   display: inline-block;
 }
 
-.header__dropdown-button {
+.header__trans-dropdown {
   padding: 2px 12px;
   height: 40px;
   font-family: "Montserrat", Arial, sans-serif;
@@ -99,7 +99,7 @@
   display: block;
 }
 
-.header__dropdown:hover .header__dropdown-button {
+.header__dropdown:hover .header__trans-dropdown {
   background-color: #efbf04;
 }
 

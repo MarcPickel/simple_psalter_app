@@ -182,4 +182,37 @@ const psalter = [
   },
 ];
 
-export { psalter };
+const welcomeCard = {
+  number: NaN,
+  title: "Welcome!",
+  subtitle: "This is the Simple Psalter App.",
+  pretext:
+    "This app is meant for the prayerful who want to approach the Psalms.",
+  text: "To get a random psalm, click on the 'Get a psalm' button above.",
+};
+
+const aboutCard = {
+  number: NaN,
+  title: "About",
+  subtitle: "The Simple Psalter App",
+  pretext: "Purpose",
+  text: `The purpose of the Simple Psalter App is twofold:<br />
+  1. To commence my career as a full-stack developer outside of my schooling,<br />
+  2. To offer a simple application for the good of others, that someone might<br />
+  be inspired by a simple thing and even build off of this random psalm generator,<br />
+  for the greater glory of God.<br />
+  Whatever comes of it, may it be but a small benefit, and inevitably aid in<br />
+  returning every user away from alluring screens towards the Creator of all things,<br />
+  the most intelligent and imaginative, God.<br />
+  + God bless you. +`,
+};
+
+const contactCard = {
+  number: NaN,
+  title: "Contact",
+  subtitle: "Marc Pickelman, Full-Stack Developer",
+  pretext: "Email: marcpc@att.net",
+  text: "Phone: 906-322-8501",
+};
+
+export { aboutCard, contactCard, psalter };
