@@ -39,6 +39,7 @@
   border-radius: 20px;
   border: solid #4b0f18 2px;
   background-color: #fbf9d9;
+  cursor: pointer;
 }
 
 .header__psalm-button:hover {
@@ -73,6 +74,7 @@
   border-radius: 20px;
   border: solid #4b0f18 2px;
   background-color: #fbf9d9;
+  cursor: pointer;
 }
 
 .header__dropdown-content {
@@ -89,6 +91,7 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  cursor: pointer;
 }
 
 .header__trans-button:hover {
