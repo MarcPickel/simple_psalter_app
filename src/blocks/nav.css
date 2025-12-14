@@ -12,20 +12,20 @@
 .nav__link a {
   margin: 0;
   text-decoration: none;
-  color: #000;
+  color: #fbf9d9;
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 500;
 }
 
 .nav__link a:hover {
-  color: #fbf9d9;
+  opacity: 0.5;
 }
 
 .nav__button {
   margin: 0;
   text-decoration: none;
-  color: #000;
+  color: #fbf9d9;
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 500;
@@ -34,6 +34,6 @@
 }
 
 .nav__button:hover {
-  color: #fbf9d9;
+  opacity: 0.5;
   cursor: pointer;
 }

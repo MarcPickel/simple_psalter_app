@@ -27,7 +27,7 @@
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 24px;
   font-weight: 500; /*Try 500, or try 700*/
-  color: #000;
+  color: #fbf9d9;
 }
 
 .header__psalm-button {
@@ -58,9 +58,12 @@
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 24px;
   font-weight: 500;
+  color: #fbf9d9;
 }
 
 .header__dropdown {
+  min-width: 125px;
+  max-width: 150px;
   position: relative;
   display: inline-block;
 }
@@ -87,7 +90,7 @@
 }
 
 .header__trans-button {
-  color: black;
+  color: #000;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
