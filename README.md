@@ -3,7 +3,7 @@
 ### Overview
 
 - Description
-- Techne
+- Technologies USed
 - Project Images
 - Link to Project via GitHub
 - Link to Video Explaining Project
@@ -13,7 +13,7 @@
 The Simple Psalter is a simple prayer app that generates for the prayerful user a random psalm from the 150 that are found in Sacred Scripture.
 
 **Technologies Used**
-In the works
+HTML, CSS, JavaScript, JSON, Node.js, Webpack, Bible API
 
 **Project Images**
 Add images!!
@@ -22,10 +22,10 @@ Add images!!
 ![Desktop view]()
 
 **Link to Project via GitHub**
-In the works
+![On GitHub](https://github.com/MarcPickel/simple_psalter_app.git)
 
-**Link to Video Explaining Project on Google**
-In the works
+**Link to Bible API**
+![Bible API](https://bible-api.com/)
 
 **Link to Video Explaining Project on YouTube**
 In the works
