@@ -2,7 +2,7 @@
   "name": "simple_psalter_app",
   "version": "0.0.1",
   "description": "psalm generator",
-  "homepage": "https://github.com/MarcPickel/simple_psalter_app#index.html",
+  "homepage": "https://marcpickel.github.io/simple_psalter_app/",
   "bugs": {
     "url": "https://github.com/MarcPickel/simple_psalter_app/issues"
   },
@@ -12,7 +12,6 @@
   },
   "license": "ISC",
   "author": "Marc Pickelman",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
