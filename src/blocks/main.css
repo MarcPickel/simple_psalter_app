@@ -3,6 +3,7 @@
   max-height: 100%;
   padding: 20px 0;
   display: flex;
-  justify-content: center;
-  background-color: #fff9e9;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
 }

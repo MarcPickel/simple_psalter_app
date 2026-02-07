@@ -1,126 +1,15 @@
 .header {
   margin: 0;
   padding: 20px 30px;
-  background-color: #6b1b24;
+  background-color: #fff;
   box-sizing: border-box;
-  border-bottom: 3px solid #efbf04;
+  border-bottom: solid 3px #336137;
   display: flex;
   align-items: center;
-}
-
-.header__content_simple-psalter {
-  margin: 0 auto 0 0;
-  display: flex;
-  align-items: center;
-  gap: 20px;
 }
 
 .header__logo {
-  width: 40px;
-  height: 40px;
-  border: solid #4b0f18 2px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-}
-
-.header__title {
-  margin: 0;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 500; /*Try 500, or try 700*/
-  color: #fbf9d9;
-}
-
-.header__psalm-button {
-  padding: 2px 12px;
-  height: 40px;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 20px;
-  border: solid #4b0f18 2px;
-  background-color: #fbf9d9;
-  cursor: pointer;
-}
-
-.header__psalm-button:hover {
-  background-color: #efbf04;
-}
-
-.header__content_psalm-trans {
-  margin: 0 0 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.header__text {
-  margin: 0;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  color: #fbf9d9;
-}
-
-.header__dropdown {
-  min-width: 125px;
-  max-width: 150px;
-  position: relative;
-  display: inline-block;
-}
-
-.header__trans-dropdown {
-  padding: 2px 12px;
-  height: 40px;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 20px;
-  border: solid #4b0f18 2px;
-  background-color: #fbf9d9;
-  cursor: pointer;
-}
-
-.header__dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.header__trans-button {
-  color: #000;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  cursor: pointer;
-}
-
-.header__trans-button:hover {
-  background-color: #ddd;
-}
-
-.header__dropdown:hover .header__dropdown-content {
-  display: block;
-}
-
-.header__dropdown:hover .header__trans-dropdown {
-  background-color: #efbf04;
-}
-
-.header__trans-button {
-  width: 100%;
-  padding: 2px 12px;
-  background: invisible;
-  border: none;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: start;
-  background-color: #fbf9d9;
-}
-
-.header__trans-button:hover {
-  background-color: #efbf04;
 }

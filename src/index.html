@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,77 +14,11 @@
 
   <body class="body">
     <header class="header">
-      <div class="header__content_simple-psalter">
-        <img
-          src="<%=require('./images/simple_psalter_logo.PNG')%>"
-          alt="The Simple Psalter logo"
-          class="header__logo"
-        />
-        <p class="header__title">The Simple Psalter</p>
-      </div>
-      <button class="header__psalm-button">Get a psalm</button>
-      <div class="header__content_psalm-trans">
-        <!--P-tag to show which psalm the user is reading-->
-        <p class="header__text"></p>
-        <!--Button to select Translation in abbreviations: placeholder text-->
-        <div class="header__dropdown">
-          <button class="header__trans-dropdown" type="button">
-            <span class="header__trans-text">Translation</span>
-          </button>
-          <div class="header__dropdown-content">
-            <button id="kjv" class="header__trans-button" type="button">
-              King James
-            </button>
-            <button id="dra" class="header__trans-button" type="button">
-              Douay-Rheims
-            </button>
-            <button id="darby" class="header__trans-button" type="button">
-              Darby
-            </button>
-            <button id="asv" class="header__trans-button" type="button">
-              American SV
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main class="main">
-      <section class="cards">
-        <!--Temporary hard-coded psalm for example-->
-        <!--<div class="card">
-          <h1 class="card__title">Psalm 23</h1>
-          <h2 class="card__subtitle">The Divine Shepherd</h2>
-          <p class="card__pretext">A Psalm of David.</p>
-          <p class="card__text">
-            1 The Lord is my shepherd, I shall not want;<br />
-            2 he makes me lie down in green pastures. He leads me beside still
-            waters;<br />
-            3 he restores my soul. He leads me in paths of righteousness for his
-            name’s sake.<br />
-            4 Even though I walk through the valley of the shadow of death, I
-            fear no evil; for thou art with me; thy rod and thy staff, they
-            comfort me.<br />
-            5 Thou preparest a table before me in the presence of my enemies;
-            thou anointest my head with oil, my cup overflows.<br />
-            6 Surely goodness and mercy shall follow me all the days of my life;
-            and I shall dwell in the house of the Lord for ever.
-          </p>
-        </div>-->
-
-        <!--Card template in which a random psalm is generated and displayed to the user-->
-        <template id="card-template">
-          <div class="card">
-            <h1 class="card__title"></h1>
-            <h2 class="card__subtitle"></h2>
-            <p class="card__pretext"></p>
-            <p class="card__text"></p>
-          </div>
-        </template>
-      </section>
-    </main>
-
-    <footer class="footer">
+      <img
+        src="<%=require('./images/simple_psalter_logo.PNG')%>"
+        alt="The Simple Psalter logo"
+        class="header__logo"
+      />
       <nav class="nav">
         <ul class="nav__links">
           <!--By clicking on the about and contact nav links,-->
@@ -104,8 +38,112 @@
           </li>
         </ul>
       </nav>
+    </header>
 
-      <p class="footer__copyright">The Simple Psalter © 2025 Marc Pickelman</p>
+    <main class="main">
+      <section class="selections">
+        <p class="selections__title">The Simple Psalter</p>
+        <div>
+          <button class="selections__psalm-button">Get a psalm</button>
+          <button class="selections__translation-button" type="button">
+            Translation
+          </button>
+        </div>
+      </section>
+      <section class="cards">
+        <!--Temporary hard-coded psalm for example-->
+        <div class="card">
+          <h1 class="card__title">Psalm 23</h1>
+          <h2 class="card__subtitle">The Divine Shepherd</h2>
+          <p class="card__pretext">A Psalm of David.</p>
+          <p class="card__text">
+            1 The Lord is my shepherd, I shall not want;<br />
+            2 he makes me lie down in green pastures. He leads me beside still
+            waters;<br />
+            3 he restores my soul. He leads me in paths of righteousness for his
+            name’s sake.<br />
+            4 Even though I walk through the valley of the shadow of death, I
+            fear no evil; for thou art with me; thy rod and thy staff, they
+            comfort me.<br />
+            5 Thou preparest a table before me in the presence of my enemies;
+            thou anointest my head with oil, my cup overflows.<br />
+            6 Surely goodness and mercy shall follow me all the days of my life;
+            and I shall dwell in the house of the Lord for ever.
+          </p>
+        </div>
+
+        <!--Card template in which a random psalm is generated and displayed to the user-->
+        <template id="card-template">
+          <div class="card">
+            <div class="card-description">
+              <!--P-tag to show which psalm the user is reading-->
+              <p class="card__psalm-number"></p>
+              <!--P-tag to show which translation the user is reading from-->
+              <p class="card__translation-text"></p>
+            </div>
+            <div class="card-content">
+              <h1 class="card__title"></h1>
+              <h2 class="card__subtitle"></h2>
+              <p class="card__pretext"></p>
+              <p class="card__text"></p>
+            </div>
+          </div>
+        </template>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">
+        The Simple Psalter © 2025-2026 Marc Pickelman
+      </p>
+      <p class="footer__text">Now, go pick up a Bible and read it!</p>
     </footer>
+
+    <div class="modal" id="translation-modal">
+      <div class="modal-container" id="modal-container">
+        <button id="kjv" class="header__trans-button" type="button">
+          King James
+        </button>
+        <button id="dra" class="header__trans-button" type="button">
+          Douay-Rheims
+        </button>
+        <button id="darby" class="header__trans-button" type="button">
+          Darby
+        </button>
+        <button id="asv" class="header__trans-button" type="button">
+          American SV
+        </button>
+      </div>
+    </div>
+
+    <div class="modal" id="about-modal">
+      <div class="modal__container" id="modal-container">
+        <h2 class="modal__title">About</h2>
+        <p class="modal__subitlte">Charlemagne: An Intellectual King</p>
+        <p clss="modal__text">
+          The great Carolingian Emperor, known as Charles the Great &ndash; or
+          Charlemagne &ndash; was not only known for being a conquering hero and
+          the Father of Europe; he was also a lover of learning.
+        </p>
+        <p class="modal__text">
+          It is said that he had the Psalter and the writings of the Early
+          Church Fathers read to him at mealtimes. Thus, the memory of this
+          learned king was this web app's inspiration.
+        </p>
+        <a
+          href="https://christianhistoryinstitute.org/magazine/article/charlemagne-for-the-love-of-learning"
+          >Read more about Charlemagne here!</a
+        >
+      </div>
+    </div>
+
+    <div class="modal" id="contact-modal">
+      <div class="modal__container" id="modal-container">
+        <h2 class="modal__title">Contact</h2>
+        <p class="modal__subtitle">Marc Pickelman, Full-Stack Developer</p>
+        <p class="modal__text">Email: marcpc@att.net</p>
+        <p class="modal__text">Phone: 906-322-8501</p>
+      </div>
+    </div>
   </body>
 </html>
