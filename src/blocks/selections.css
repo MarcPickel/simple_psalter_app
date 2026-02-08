@@ -1,11 +1,46 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../vendor/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
 .selections {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
 .selections__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #336137;
 }
 
-.selections__psalm-button {
+.selections__button {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px;
+  background-image: linear-gradient(to top, #336137, #6d9771);
+  color: #fafafa;
+  border-radius: 8px;
+  border: none;
+  border-bottom: solid 1px #274c2a;
+  box-shadow: 0 4px 3px -2px #808080;
+  transition: transform 0.1s ease;
+  transform: translateY(0);
 }
 
-.selections__translation-button {
+.selections__button:hover {
+  opacity: 0.8;
+  border-bottom: none;
+  box-shadow: none;
+  background-image: none;
+  background-color: #2a532d;
+  cursor: pointer;
+  transform: translateY(1px);
+}
+
+.selections__button_translation {
+  margin-left: 20px;
 }

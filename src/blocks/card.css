@@ -1,20 +1,55 @@
-.card {
-  width: 400px;
-  font-family: "Libtertinus Serif Display", "Times New Roman", serif;
+@font-face {
+  font-family: "Montserrat";
+  src: url(../vendor/fonts/Montserrat-VariableFont_wght.ttf);
+}
 
-  /*Temporary border to easiky visualize card placement and behavior*/
-  /*border: 1px solid red;*/
+.card {
+  padding: 30px;
+  width: 425px;
+  border-radius: 8px;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #fafafa;
+  font-weight: 500;
+  background-image: linear-gradient(to top, #336137, #3e6541);
+  border-bottom: solid 1px #274c2a;
+  box-shadow: 0 2px 4px 2px #808080;
+}
+
+.card__description {
+  display: flex;
+  justify-content: space-between;
+  color: #336137;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.card__psalm-number {
+  margin: 0 0 12px;
+}
+
+.card__translation-text {
+  margin: 0 0 12px;
+}
+
+.card__row {
+  display: flex;
+}
+
+.card__column {
+  margin-left: 30px;
+}
+
+.card__number {
+  margin: 0 0 20px;
+  font-size: 50px;
+  font-weight: 600;
 }
 
 .card__title {
-  margin: 0 0 20px;
-  font-size: 33px;
-  font-weight: 500;
-}
-
-.card__subtitle {
-  margin: 0 0 20px;
+  margin: 0 0 12px;
   font-size: 24px;
+  font-weight: 700;
 }
 
 .card__pretext {

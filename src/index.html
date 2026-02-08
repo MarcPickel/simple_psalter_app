@@ -42,20 +42,33 @@
 
     <main class="main">
       <section class="selections">
-        <p class="selections__title">The Simple Psalter</p>
+        <h1 class="selections__title">The Simple Psalter App</h1>
         <div>
-          <button class="selections__psalm-button">Get a psalm</button>
-          <button class="selections__translation-button" type="button">
+          <button class="selections__button selections__button_psalm">
+            Get a psalm
+          </button>
+          <button
+            class="selections__button selections__button_translation"
+            type="button"
+          >
             Translation
           </button>
         </div>
       </section>
       <section class="cards">
         <!--Temporary hard-coded psalm for example-->
+        <div class="card__description">
+          <p class="card__psalm-number">Psalm 23</p>
+          <p class="card__translation-text">King James Version</p>
+        </div>
         <div class="card">
-          <h1 class="card__title">Psalm 23</h1>
-          <h2 class="card__subtitle">The Divine Shepherd</h2>
-          <p class="card__pretext">A Psalm of David.</p>
+          <div class="card__row">
+            <p class="card__number">23</p>
+            <div class="card__column">
+              <h2 class="card__title">The Divine Shepherd</h2>
+              <p class="card__pretext">A Psalm of David.</p>
+            </div>
+          </div>
           <p class="card__text">
             1 The Lord is my shepherd, I shall not want;<br />
             2 he makes me lie down in green pastures. He leads me beside still
@@ -96,7 +109,7 @@
       <p class="footer__copyright">
         The Simple Psalter © 2025-2026 Marc Pickelman
       </p>
-      <p class="footer__text">Now, go pick up a Bible and read it!</p>
+      <p class="footer__text">Now, go dust off a Bible and read it!</p>
     </footer>
 
     <div class="modal" id="translation-modal">
