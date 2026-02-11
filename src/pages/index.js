@@ -40,8 +40,6 @@ const api = new Api({
   headers: {
     "Content-Type": "application/json",
   },
-  translation: "",
-  reference: "",
 });
 
 //Handlers
@@ -53,6 +51,8 @@ function handleNewCard() {
       console.log("Success:", data);
       // Store the current psalm data so we can switch translations later
       currentPsalmData = data;
+      // Here is where I will switch this method with the getCard method
+      // from the Card Class.
       const cardEl = getCardEl(data);
       cardContainer.replaceChildren(cardEl);
     })
@@ -61,13 +61,15 @@ function handleNewCard() {
     });
 }
 
-function handleWelcomeCard() {
+// I won't need this function any more -- getting rid of Welcome Card
+/*function handleWelcomeCard() {
   // Clear current psalm data since this isn't a psalm
   currentPsalmData = null;
   const cardEl = getCardEl(welcomeCard);
   cardContainer.replaceChildren(cardEl);
-}
+}*/
 
+// Change this to handleAboutModal -- have it open About Modal
 function handleAboutCard() {
   // Clear current psalm data since this isn't a psalm
   currentPsalmData = null;
@@ -75,6 +77,7 @@ function handleAboutCard() {
   cardContainer.replaceChildren(cardEl);
 }
 
+// Change this to handleContactModal -- have it open Contact Modal
 function handleContactCard() {
   // Clear current psalm data since this isn't a psalm
   currentPsalmData = null;
@@ -86,6 +89,7 @@ function handleTextChange(data) {
   headerPsalmNumberEl.textContent = data.reference;
 }
 
+// Change to, instead of the button's text, just the text atop the card
 function handleTextTransChange(buttonText) {
   transTextEl.textContent = buttonText;
 }

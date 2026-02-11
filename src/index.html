@@ -57,47 +57,43 @@
       </section>
       <section class="cards">
         <!--Temporary hard-coded psalm for example-->
-        <div class="card__description">
-          <p class="card__psalm-number">Psalm 23</p>
-          <p class="card__translation-text">King James Version</p>
-        </div>
-        <div class="card">
-          <div class="card__row">
-            <p class="card__number">23</p>
-            <div class="card__column">
-              <h2 class="card__title">The Divine Shepherd</h2>
-              <p class="card__pretext">A Psalm of David.</p>
-            </div>
+        <!--<div class="card">
+          <div class="card__description">
+            <p class="card__psalm-number">Psalm 23</p>
+            <p class="card__translation-text">King James Version</p>
           </div>
-          <p class="card__text">
-            1 The Lord is my shepherd, I shall not want;<br />
-            2 he makes me lie down in green pastures. He leads me beside still
-            waters;<br />
-            3 he restores my soul. He leads me in paths of righteousness for his
-            name’s sake.<br />
-            4 Even though I walk through the valley of the shadow of death, I
-            fear no evil; for thou art with me; thy rod and thy staff, they
-            comfort me.<br />
-            5 Thou preparest a table before me in the presence of my enemies;
-            thou anointest my head with oil, my cup overflows.<br />
-            6 Surely goodness and mercy shall follow me all the days of my life;
-            and I shall dwell in the house of the Lord for ever.
-          </p>
-        </div>
+          <div class="card__container">
+            <p class="card__number">23</p>
+            <p class="card__text">
+              1 The Lord is my shepherd, I shall not want;<br />
+              2 he makes me lie down in green pastures. He leads me beside still
+              waters;<br />
+              3 he restores my soul. He leads me in paths of righteousness for
+              his name’s sake.<br />
+              4 Even though I walk through the valley of the shadow of death, I
+              fear no evil; for thou art with me; thy rod and thy staff, they
+              comfort me.<br />
+              5 Thou preparest a table before me in the presence of my enemies;
+              thou anointest my head with oil, my cup overflows.<br />
+              6 Surely goodness and mercy shall follow me all the days of my
+              life; and I shall dwell in the house of the Lord for ever.
+            </p>
+          </div>
+        </div>-->
 
         <!--Card template in which a random psalm is generated and displayed to the user-->
         <template id="card-template">
           <div class="card">
-            <div class="card-description">
+            <div class="card__description">
               <!--P-tag to show which psalm the user is reading-->
               <p class="card__psalm-number"></p>
               <!--P-tag to show which translation the user is reading from-->
               <p class="card__translation-text"></p>
             </div>
-            <div class="card-content">
-              <h1 class="card__title"></h1>
-              <h2 class="card__subtitle"></h2>
-              <p class="card__pretext"></p>
+            <div class="card__container">
+              <!--P-tag to show which psalm number the user is reading-->
+              <p class="card__number"></p>
+              <!--P-tag to shows the psalm text-->
               <p class="card__text"></p>
             </div>
           </div>
