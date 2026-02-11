@@ -6,6 +6,9 @@ import { welcomeCard, aboutCard, contactCard } from "../utils/constants";
 //Header Variables
 const header = document.querySelector(".header");
 
+const headerAboutButton = footer.querySelector(".nav__about-button");
+const headerContactButton = footer.querySelector(".nav__contact-button");
+
 const headerPsalmButtonEl = header.querySelector(".header__psalm-button");
 
 const headerContent = header.querySelector(".header__content_psalm-trans");
@@ -18,20 +21,11 @@ const douayRheimsTransEl = transDropdownEl.querySelector("#dra");
 const darbyTransEl = transDropdownEl.querySelector("#darby");
 const americanTransEl = transDropdownEl.querySelector("#asv");
 
-// Main Variables
-
-const cardTemplate = document
-  .querySelector("#card-template")
-  .content.querySelector(".card");
-const cardContainer = document.querySelector(".cards");
-
 // Track current psalm data for translation switching
 let currentPsalmData = null;
 
 // Footer Variables
 const footer = document.querySelector(".footer");
-const footerAboutButton = footer.querySelector(".nav__about-button");
-const footerContactButton = footer.querySelector(".nav__contact-button");
 
 // API Instantiation
 
