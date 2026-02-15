@@ -1,3 +1,4 @@
+/*
 const welcomeCard = {
   reference: "Welcome!",
   subtitle: "This is the Simple Psalter App.",
@@ -29,5 +30,6 @@ const contactCard = {
   pretext: "Email: marcpc@att.net",
   text: "Phone: 906-322-8501",
 };
+*/
 
-export { welcomeCard, aboutCard, contactCard };
+// export { welcomeCard, aboutCard, contactCard };

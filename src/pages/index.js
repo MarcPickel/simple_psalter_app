@@ -1,34 +1,34 @@
 import "./index.css";
-import Api from "../utils/api";
-
-import { welcomeCard, aboutCard, contactCard } from "../utils/constants";
+import Api from "../utils/api.js";
+import Card from "../components/Card.js";
+import Modal from "../components/Modal.js";
 
 //Header Variables
 const header = document.querySelector(".header");
 
-const headerAboutButton = footer.querySelector(".nav__about-button");
-const headerContactButton = footer.querySelector(".nav__contact-button");
+const headerAboutButton = header.querySelector(".nav__about-button");
+const headerContactButton = header.querySelector(".nav__contact-button");
 
-const headerPsalmButtonEl = header.querySelector(".header__psalm-button");
+// Selections Variables
+const selectionsEl = document.querySelector(".selections");
+const getPsalmButton = selectionsEl.querySelector("#psalm-button");
+const translationButton = selectionsEl.querySelector("#translation-button");
 
-const headerContent = header.querySelector(".header__content_psalm-trans");
-const headerPsalmNumberEl = headerContent.querySelector(".header__text");
+// Modal Variables
+const modal = document.querySelector(".modal");
+const kingJamesTransButton = modal.querySelector("#kjv");
+const douayRheimsTransButton = modal.querySelector("#dra");
+const darbyTransButton = modal.querySelector("#darby");
+const americanTransButton = modal.querySelector("#asv");
 
-const transDropdownEl = headerContent.querySelector(".header__dropdown");
-const transTextEl = transDropdownEl.querySelector(".header__trans-text");
-const kingJamesTransEl = transDropdownEl.querySelector("#kjv");
-const douayRheimsTransEl = transDropdownEl.querySelector("#dra");
-const darbyTransEl = transDropdownEl.querySelector("#darby");
-const americanTransEl = transDropdownEl.querySelector("#asv");
-
+// Trackers
 // Track current psalm data for translation switching
 let currentPsalmData = null;
-
-// Footer Variables
-const footer = document.querySelector(".footer");
+let currentCard = null;
+const defaultTransId = "#kjv";
+let currentTransId = "";
 
 // API Instantiation
-
 const api = new Api({
   baseUrl: "https://bible-api.com",
   headers: {
@@ -36,35 +36,8 @@ const api = new Api({
   },
 });
 
-//Handlers
-
-function handleNewCard() {
-  api
-    .getRandomPsalm()
-    .then((data) => {
-      console.log("Success:", data);
-      // Store the current psalm data so we can switch translations later
-      currentPsalmData = data;
-      // Here is where I will switch this method with the getCard method
-      // from the Card Class.
-      const cardEl = getCardEl(data);
-      cardContainer.replaceChildren(cardEl);
-    })
-    .catch((error) => {
-      console.error("Error fetching psalm:", error);
-    });
-}
-
-// I won't need this function any more -- getting rid of Welcome Card
-/*function handleWelcomeCard() {
-  // Clear current psalm data since this isn't a psalm
-  currentPsalmData = null;
-  const cardEl = getCardEl(welcomeCard);
-  cardContainer.replaceChildren(cardEl);
-}*/
-
 // Change this to handleAboutModal -- have it open About Modal
-function handleAboutCard() {
+function handleAboutModal() {
   // Clear current psalm data since this isn't a psalm
   currentPsalmData = null;
   const cardEl = getCardEl(aboutCard);
@@ -72,24 +45,76 @@ function handleAboutCard() {
 }
 
 // Change this to handleContactModal -- have it open Contact Modal
-function handleContactCard() {
+function handleContactModal() {
   // Clear current psalm data since this isn't a psalm
   currentPsalmData = null;
   const cardEl = getCardEl(contactCard);
   cardContainer.replaceChildren(cardEl);
 }
 
-function handleTextChange(data) {
-  headerPsalmNumberEl.textContent = data.reference;
-}
+// Card and Random Psalm Functionality
+const getPsalm = () => {
+  api
+    .getRandomPsalm()
+    .then((data) => {
+      currentPsalmData = data;
+
+      if (currentCard) {
+        currentCard.remove();
+      }
+
+      currentCard = new Card(currentPsalmData, "#card-template");
+      const cardEl = currentCard.getCard();
+
+      document.querySelector(".cards").append(cardEl);
+    })
+    .catch((error) => {
+      console.error("Error fetching psalm:", error);
+    });
+};
+
+getPsalmButton.addEventListener("click", getPsalm);
+
+// Modal Functionality
+const translationModal = new Modal("#translation-modal");
+translationButton.addEventListener("click", () => {
+  translationModal.open();
+  c;
+});
 
 // Change to, instead of the button's text, just the text atop the card
-function handleTextTransChange(buttonText) {
-  transTextEl.textContent = buttonText;
+function handleTextTransChange(transText) {
+  transTextEl.textContent = transText;
 }
 
+const handleTransChange = (translationId, transText) => {
+  if (!currentPsalmData) {
+    console.warn(
+      "Ask, and it will be given you; seek, and you will find; knock, and it will be opened to you.",
+    );
+    return;
+  }
+
+  api
+    .changeTranslation({ currentPsalmData, translation: translationId })
+    .then((data) => {
+      currentPsalmData = data;
+
+      if (currentCard) {
+        currentCard.remove();
+      }
+
+      const cardEl = currentCard.getCard();
+      currentCard = new Card(currentPsalmData, "#card-template");
+
+      document.querySelector(".cards").append(cardEl);
+
+      handleTextTransChange(transText);
+    });
+};
+
 // Change Translation Function
-function handleTransChange(translationId, buttonText) {
+function oldHandleTransChange(translationId, buttonText) {
   if (!currentPsalmData) {
     console.warn("No psalm loaded. Please get a psalm first.");
     return;
@@ -111,41 +136,8 @@ function handleTransChange(translationId, buttonText) {
     });
 }
 
-// Get Card El Function
-function getCardEl(data) {
-  let cardEl = cardTemplate.cloneNode(true);
-  let cardTitleEl = cardEl.querySelector(".card__title");
-  let cardSubtitleEl = cardEl.querySelector(".card__subtitle");
-  let cardPretextEl = cardEl.querySelector(".card__pretext");
-  let cardTextEl = cardEl.querySelector(".card__text");
-
-  cardTitleEl.textContent = data.reference;
-  cardSubtitleEl.textContent = data.subtitle;
-  cardPretextEl.textContent = data.pretext;
-  cardTextEl.textContent = data.text;
-
-  handleTextChange(data);
-
-  return cardEl;
-}
-
 // Event Listeners
-document.addEventListener("DOMContentLoaded", () => {
-  handleWelcomeCard();
-});
-
-headerPsalmButtonEl.addEventListener("click", () => {
-  handleNewCard();
-});
-
-footerAboutButton.addEventListener("click", () => {
-  handleAboutCard();
-});
-
-footerContactButton.addEventListener("click", () => {
-  handleContactCard();
-});
-
+/*
 kingJamesTransEl.addEventListener("click", (evt) => {
   handleTransChange("kjv", evt.target.textContent);
 });
@@ -161,3 +153,4 @@ darbyTransEl.addEventListener("click", (evt) => {
 americanTransEl.addEventListener("click", (evt) => {
   handleTransChange("asv", evt.target.textContent);
 });
+*/

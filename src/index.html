@@ -23,10 +23,18 @@
         <ul class="nav__links">
           <!--By clicking on the about and contact nav links,-->
           <!--the header and footer shouldn't change, but the main section.-->
-          <button class="nav__button nav__about-button" type="button">
+          <button
+            id="about"
+            class="nav__button nav__about-button"
+            type="button"
+          >
             About
           </button>
-          <button class="nav__button nav__contact-button" type="button">
+          <button
+            id="contact"
+            class="nav__button nav__contact-button"
+            type="button"
+          >
             Contact
           </button>
           <li class="nav__link">
@@ -44,11 +52,12 @@
       <section class="selections">
         <h1 class="selections__title">The Simple Psalter App</h1>
         <div>
-          <button class="selections__button selections__button_psalm">
+          <button id="psalm-button" class="selections__button" type="button">
             Get a psalm
           </button>
           <button
-            class="selections__button selections__button_translation"
+            id="translation-button"
+            class="selections__button"
             type="button"
           >
             Translation
@@ -111,23 +120,25 @@
     <div class="modal" id="translation-modal">
       <div class="modal__container" id="modal-container">
         <h2 class="modal__title">Choose a translation</h2>
-        <button
-          class=".modal__close"
-          type="button"
-          aria-label="Close modal"
-        ></button>
-        <button id="kjv" class="header__trans-button" type="button">
-          King James
-        </button>
-        <button id="dra" class="header__trans-button" type="button">
-          Douay-Rheims
-        </button>
-        <button id="darby" class="header__trans-button" type="button">
-          Darby
-        </button>
-        <button id="asv" class="header__trans-button" type="button">
-          American SV
-        </button>
+        <div class="modal__content">
+          <button
+            class="modal__close"
+            type="button"
+            aria-label="Close modal"
+          ></button>
+          <button id="kjv" class="modal__trans-button" type="button">
+            King James
+          </button>
+          <button id="dra" class="modal__trans-button" type="button">
+            Douay-Rheims
+          </button>
+          <button id="darby" class="modal__trans-button" type="button">
+            Darby
+          </button>
+          <button id="asv" class="modal__trans-button" type="button">
+            American SV
+          </button>
+        </div>
       </div>
     </div>
 
@@ -135,7 +146,7 @@
       <div class="modal__container" id="modal-container">
         <h2 class="modal__title">About</h2>
         <button
-          class=".modal__close"
+          class="modal__close"
           type="button"
           aria-label="Close modal"
         ></button>
@@ -161,11 +172,11 @@
       <div class="modal__container" id="modal-container">
         <h2 class="modal__title">Contact</h2>
         <button
-          class=".modal__close"
+          class="modal__close"
           type="button"
           aria-label="Close modal"
         ></button>
-        <p class="modal__subtitle">Marc Pickelman, Full-Stack Developer</p>
+        <p class="modal__text">Marc Pickelman, Full-Stack Developer</p>
         <p class="modal__text">Email: marcpc@att.net</p>
         <p class="modal__text">Phone: 906-322-8501</p>
       </div>

@@ -1,5 +1,5 @@
 class Modal {
-  constructor({ modalSelector }) {
+  constructor(modalSelector) {
     this._modalEl = document.querySelector(modalSelector);
     this._modalCloseButton = this._modalEl.querySelector(".modal__close");
     this._handleEscapeClose = this._handleEscapeClose.bind(this);
@@ -15,7 +15,7 @@ class Modal {
     document.removeEventListener("keyup", this._handleEscapeClose);
   }
 
-  setModalEventListeners() {
+  setEventListeners() {
     this._modalEl.addEventListener("mousedown", (evt) => {
       if (
         evt.target.classList(".modal__close") ||
