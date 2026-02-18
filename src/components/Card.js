@@ -44,8 +44,6 @@ class Card {
 
     return this._cardEl;
   }
-
-  renderTrans() {}
 }
 
 export default Card;

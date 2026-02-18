@@ -79,7 +79,6 @@ getPsalmButton.addEventListener("click", getPsalm);
 const translationModal = new Modal("#translation-modal");
 translationButton.addEventListener("click", () => {
   translationModal.open();
-  c;
 });
 
 // Change to, instead of the button's text, just the text atop the card
@@ -95,8 +94,10 @@ const handleTransChange = (translationId, transText) => {
     return;
   }
 
+  const reference = currentPsalmData.reference;
+
   api
-    .changeTranslation({ currentPsalmData, translation: translationId })
+    .changeTranslation({ reference, translation: translationId })
     .then((data) => {
       currentPsalmData = data;
 
@@ -108,8 +109,9 @@ const handleTransChange = (translationId, transText) => {
       currentCard = new Card(currentPsalmData, "#card-template");
 
       document.querySelector(".cards").append(cardEl);
-
-      handleTextTransChange(transText);
+    })
+    .catch((error) => {
+      console.error("Error fetching translation:", error);
     });
 };
 
@@ -137,20 +139,19 @@ function oldHandleTransChange(translationId, buttonText) {
 }
 
 // Event Listeners
-/*
-kingJamesTransEl.addEventListener("click", (evt) => {
+
+kingJamesTransButton.addEventListener("click", (evt) => {
   handleTransChange("kjv", evt.target.textContent);
 });
 
-douayRheimsTransEl.addEventListener("click", (evt) => {
+douayRheimsTransButton.addEventListener("click", (evt) => {
   handleTransChange("dra", evt.target.textContent);
 });
 
-darbyTransEl.addEventListener("click", (evt) => {
+darbyTransButton.addEventListener("click", (evt) => {
   handleTransChange("darby", evt.target.textContent);
 });
 
-americanTransEl.addEventListener("click", (evt) => {
+americanTransButton.addEventListener("click", (evt) => {
   handleTransChange("asv", evt.target.textContent);
 });
-*/
