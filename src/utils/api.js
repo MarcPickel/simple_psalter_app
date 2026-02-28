@@ -12,10 +12,10 @@ class Api {
     }
   }
 
-  getRandomPsalm() {
+  getRandomPsalm(translationId) {
     let randomPsalmNumber = Math.floor(Math.random() * 150) + 1;
     return fetch(
-      `${this._baseUrl}/psalm%20${randomPsalmNumber}?translation=kjv`,
+      `${this._baseUrl}/psalm%20${randomPsalmNumber}?translation=${translationId}`,
     ).then(this._checkResponse);
   }
 

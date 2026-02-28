@@ -25,7 +25,9 @@
 }
 
 .modal__container {
+  padding: 20px;
   min-width: 425px;
+  max-width: 500px;
   min-height: 350px;
   position: relative;
   background-image: linear-gradient(to top, #336137, #3e6541);
@@ -49,14 +51,13 @@
 }
 
 .modal__title {
-  margin: 20px auto 25px;
+  margin: 0 auto 25px;
   font-size: 28px;
   text-align: center;
 }
 
 .modal__content {
   height: 100%;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,9 +65,21 @@
 }
 
 .modal__subtitle {
+  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .modal__text {
+  margin: 0 0 15px;
+}
+
+.modal__link {
+  color: #fafafa;
+}
+
+.modal__link:hover {
+  opacity: 0.6;
 }
 
 .modal__trans-button {
