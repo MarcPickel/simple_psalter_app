@@ -61,7 +61,6 @@ const getPsalm = () => {
     .getRandomPsalm(currentTranslation)
     .then((data) => {
       currentPsalmData = data;
-      console.log("Current Translation:", data.translation_id);
 
       if (currentCard) {
         currentCard.remove();

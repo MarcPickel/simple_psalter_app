@@ -3,6 +3,13 @@
   src: url(../vendor/fonts/Montserrat-VariableFont_wght.ttf);
 }
 
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .card__container {
   padding: 30px;
   width: 425px;
@@ -13,6 +20,9 @@
   background-image: linear-gradient(to top, #336137, #3e6541);
   border-bottom: solid 1px #274c2a;
   box-shadow: 0 2px 4px 2px #808080;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlide 1s ease-out forwards;
 }
 
 .card__description {
